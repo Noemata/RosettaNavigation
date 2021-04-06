@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="ListView1.Page2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ListViewWinUI1"
+    xmlns:data="using:SimpleData"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Button Margin="8" Grid.Column="1" Content="Back To Page 1" Width="120" Click="OnClick" VerticalAlignment="Top" />
+        <ListView x:Name="ItemsList"
+                  ItemsSource="{Binding Items}" >
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="data:SampleItem">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <TextBlock Margin="2" Text="{x:Bind Month}" />
+                        </Border>
+                        <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <TextBlock Margin="2" Text="{x:Bind Date}" />
+                        </Border>
+                        <Border Grid.Column="2" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <TextBlock Margin="2" Text="{x:Bind Name}" />
+                        </Border>
+                        <Border Grid.Column="3" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <TextBlock Margin="2" Text="{x:Bind Category}" />
+                        </Border>
+                        <Border Grid.Column="4" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <TextBlock Margin="2" Text="{x:Bind Country}" />
+                        </Border>
+                        <Border Grid.Column="5" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <TextBlock Margin="2" Text="{x:Bind Quantity}" />
+                        </Border>
+                        <Border Grid.Column="6" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <TextBlock Margin="2" Text="{x:Bind Price}" />
+                        </Border>
+                        <Border Grid.Column="7" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <TextBlock Margin="2" Text="{x:Bind Amount}" />
+                        </Border>
+                        <Border Grid.Column="8" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <CheckBox Margin="2" IsChecked="{x:Bind Expensive}" />
+                        </Border>
+                        <Border Grid.Column="9" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <CheckBox Margin="2" IsChecked="{x:Bind Checked}" />
+                        </Border>
+                        <Border Grid.Column="10" BorderBrush="Black" BorderThickness="1 1 0 1" >
+                            <CheckBox Margin="2" IsChecked="{x:Bind Reviewed}" />
+                        </Border>
+                        <Border Grid.Column="11" BorderBrush="Black" BorderThickness="1 1 1 1" >
+                            <CheckBox Margin="2" IsChecked="{x:Bind Done}" />
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
