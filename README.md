@@ -21,3 +21,12 @@ To test Navigation Frame handling for NavigationCacheMode.Enabled scenarios, unc
 ```
 
 Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  Correct results may be obtained by executing outside of VS2019.
+
+## Findings
+
+ListViewUwp1 performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
+ListViewWinUI1 becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
+DataGridUwp1 performs well and does not leak with NavigationCacheMode set to Enabled, does not leak but is sluggish when Enabled.  
+DataGridWinUI1 cannot be completed at this time because DataGrid has not been updated to the current release of WinUI.  
+
+
