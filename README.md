@@ -20,7 +20,7 @@ To test Navigation Frame handling for NavigationCacheMode.Enabled scenarios, unc
         }
 ```
 
-Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  Correct results may be obtained by executing outside of VS2019.
+Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  Correct results may be obtained by executing outside of VS2019.  VS2019 also contributes a negative performance artifact.
 
 ## Findings
 
