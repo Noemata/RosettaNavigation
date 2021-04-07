@@ -6,7 +6,7 @@ This tool is intented to ease the process of testing Navigation Frame interactio
 
 To test Navigation Frame handling for NavigationCacheMode.Enabled scenarios, uncomment the NavigationCacheMode code shown below in Page1 and Page2.
 
-```
+```csharp
         public Page1()
         {
             // Note: NavigationCacheMode.Disabled is the default
