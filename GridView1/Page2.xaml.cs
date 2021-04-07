@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 
@@ -8,11 +7,11 @@ using Windows.UI.Xaml.Navigation;
 
 using SimpleData;
 
-namespace ListView1
+namespace GridView1
 {
     // MP! Automated paging ideas by Noemata.
 
-    public sealed partial class Page1 : Page, INotifyPropertyChanged
+    public sealed partial class Page2 : Page, INotifyPropertyChanged
     {
         private ObservableCollection<SampleItem> _items;
         public ObservableCollection<SampleItem> Items
@@ -21,15 +20,14 @@ namespace ListView1
             set { _items = value; RaisePropertyChanged(nameof(Items)); }
         }
 
-        public Page1()
+        public Page2()
         {
             // Note: NavigationCacheMode.Disabled is the default
             //NavigationCacheMode = NavigationCacheMode.Enabled;
             InitializeComponent();
             DataContext = null;
             Loaded += OnLoaded;
-            Trace.WriteLine("Page 1 not cached.");
-
+            Trace.WriteLine("Page 2 not cached.");
             RegisterRendering();
         }
 
@@ -41,7 +39,7 @@ namespace ListView1
             if (MainPage.Context.AutoPage && redrawCycle == 4)
             {
                 UnRegisterRendering();
-                MainPage.RootFrame.Navigate(typeof(Page2));
+                MainPage.RootFrame.GoBack();
             }
 
             // Stop rendering if UI is going idle.
@@ -54,32 +52,29 @@ namespace ListView1
             UnRegisterRendering();
         }
 
-        ~Page1()
+        ~Page2()
         {
-            Trace.WriteLine("Page1 cleared.");
+            Trace.WriteLine("Page2 cleared.");
         }
 
         private async void OnLoaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             if (DataContext == null)
             {
-                Trace.WriteLine("Loading Page 1 data ...");
-
+                Trace.WriteLine("Loading Page 2 data ...");
                 Items = await Do.CreateItems(MainPage.LineCount);
                 DataContext = this;
             }
 
-            MainPage.Context.CheckMem();
-
             if (MainPage.Context.AutoPage && NavigationCacheMode != NavigationCacheMode.Disabled)
-                MainPage.RootFrame.Navigate(typeof(Page2));
+                MainPage.RootFrame.GoBack();
         }
 
         private void OnClick(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             // Need to prevent the OnRender page change from becoming additive.  Required when rendering is active.
             if (redrawCycle > 4 || NavigationCacheMode == NavigationCacheMode.Enabled)
-                MainPage.RootFrame.Navigate(typeof(Page2));
+                MainPage.RootFrame.GoBack();
         }
 
         void RegisterRendering()

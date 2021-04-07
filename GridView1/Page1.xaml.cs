@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Navigation;
 
 using SimpleData;
 
-namespace ListView1
+namespace GridView1
 {
     // MP! Automated paging ideas by Noemata.
 
