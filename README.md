@@ -24,6 +24,8 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 
 ## Findings
 
+(As of April 2021)
+
 ListViewUwp1 performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
 ListViewWinUI1 becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
 DataGridUwp1 performs well and does not leak with NavigationCacheMode set to Enabled, does not leak but is sluggish when Enabled.  
