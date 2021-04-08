@@ -1,12 +1,11 @@
 ﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:GridView1">
+    x:Class="ListBox1.Templates"
+    xmlns:data="using:SimpleData"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!-- MP! We give up x:Bind when we place a DataTemplate into a ResourceDictionary thats in the form of a Style
-             Look at ListBox1 for an alternative approach.
-    -->
-    <DataTemplate x:Key="GridItemTemplate">
+    <!-- MP! Use of a ResourceDictionary with x:Bind requires a backing class "Templates.xaml.cs" -->
+    <DataTemplate x:Key="ListItemTemplate" x:DataType="data:SampleItem">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100" />
@@ -23,40 +22,40 @@
                 <ColumnDefinition Width="100" />
             </Grid.ColumnDefinitions>
             <Border Grid.Column="0" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <TextBlock Margin="2" Text="{Binding Month}" />
+                <TextBlock Margin="2" Text="{x:Bind Month}" />
             </Border>
             <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <TextBlock Margin="2" Text="{Binding Date}" />
+                <TextBlock Margin="2" Text="{x:Bind Date}" />
             </Border>
             <Border Grid.Column="2" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <TextBlock Margin="2" Text="{Binding Name}" />
+                <TextBlock Margin="2" Text="{x:Bind Name}" />
             </Border>
             <Border Grid.Column="3" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <TextBlock Margin="2" Text="{Binding Category}" />
+                <TextBlock Margin="2" Text="{x:Bind Category}" />
             </Border>
             <Border Grid.Column="4" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <TextBlock Margin="2" Text="{Binding Country}" />
+                <TextBlock Margin="2" Text="{x:Bind Country}" />
             </Border>
             <Border Grid.Column="5" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <TextBlock Margin="2" Text="{Binding Quantity}" />
+                <TextBlock Margin="2" Text="{x:Bind Quantity}" />
             </Border>
             <Border Grid.Column="6" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <TextBlock Margin="2" Text="{Binding Price}" />
+                <TextBlock Margin="2" Text="{x:Bind Price}" />
             </Border>
             <Border Grid.Column="7" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <TextBlock Margin="2" Text="{Binding Amount}" />
+                <TextBlock Margin="2" Text="{x:Bind Amount}" />
             </Border>
             <Border Grid.Column="8" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <CheckBox Margin="2" IsChecked="{Binding Expensive}" />
+                <CheckBox Margin="2" IsChecked="{x:Bind Expensive}" />
             </Border>
             <Border Grid.Column="9" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <CheckBox Margin="2" IsChecked="{Binding Checked}" />
+                <CheckBox Margin="2" IsChecked="{x:Bind Checked}" />
             </Border>
             <Border Grid.Column="10" BorderBrush="Black" BorderThickness="1 1 0 1" >
-                <CheckBox Margin="2" IsChecked="{Binding Reviewed}" />
+                <CheckBox Margin="2" IsChecked="{x:Bind Reviewed}" />
             </Border>
             <Border Grid.Column="11" BorderBrush="Black" BorderThickness="1 1 1 1" >
-                <CheckBox Margin="2" IsChecked="{Binding Done}" />
+                <CheckBox Margin="2" IsChecked="{x:Bind Done}" />
             </Border>
         </Grid>
     </DataTemplate>
