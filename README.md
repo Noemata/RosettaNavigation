@@ -45,3 +45,21 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 > **TabViewWinUI1** leaks memory badly and is even worse than Uwp variant.  
 > **WebViewWinUI1** performs very well, does not leak when NavigationCacheMode set to Enabled, small leak when Disabled.  !!Warning !! flicker may induce seizure for those with photosensitive epilepsy.  
 > **TreeViewWinUI1** crashes.  
+
+The WinUI crash happens inside of JsonHelper.cs in the static method call shown below:
+
+```csharp
+        private static TreeViewNode GetChild(KeyValuePair<string, JToken> pair)
+        {
+            if (pair.Value == null)
+                return null;
+
+            // MP! WinUI Crashes here??
+            TreeViewNode child = new TreeViewNode()
+            {
+                Content = pair, IsExpanded = true
+            };
+
+            return child;
+        }
+```
