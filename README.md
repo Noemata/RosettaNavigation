@@ -34,6 +34,7 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 > **DataGridUwp1** performs well and does not leak with NavigationCacheMode set to Enabled, does not leak but is sluggish when Enabled.  
 > **TabViewUwp1** leaks memory badly and is unusable as is.  
 > **WebViewUwp1** performs well, has a small leak when NavigationCacheMode set to Disabled.  
+> **TreeViewUwp1** performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
 
 **WinUI**
 
@@ -43,3 +44,4 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 > **DataGridWinUI1** cannot be completed at this time because DataGrid has not been updated to the current release of WinUI.  
 > **TabViewWinUI1** leaks memory badly and is even worse than Uwp variant.  
 > **WebViewWinUI1** performs very well, does not leak when NavigationCacheMode set to Enabled, small leak when Disabled.  !!Warning !! flicker may induce seizure for those with photosensitive epilepsy.  
+> **TreeViewWinUI1** crashes.  
