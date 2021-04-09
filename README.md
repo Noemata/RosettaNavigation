@@ -28,6 +28,7 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 
 **UWP**
 
+> **CanvasUwp1** *slightly sluggish depending on controls used, does not leak with either NavigationCacheMode Enabled or Disabled.  
 > **ListBoxUwp1** performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
 > **ListViewUwp1** performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
 > **GridViewUwp1** performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
@@ -36,8 +37,11 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 > **WebViewUwp1** performs well, has a small leak when NavigationCacheMode set to Disabled.  
 > **TreeViewUwp1** performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
 
+*TextBox is causing slower performance due to redraw issue.
+
 **WinUI**
 
+> **CanvasWinUI** sluggish depending on controls used, becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
 > **ListBoxWinUI1** becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
 > **ListViewWinUI1** becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
 > **GridViewWinUI1** becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
