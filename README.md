@@ -31,7 +31,7 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 > **ListBoxUwp1** performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
 > **ListViewUwp1** performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
 > **GridViewUwp1** performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
-> **DataGridUwp1** performs well and does not leak with NavigationCacheMode set to Enabled, does not leak but is sluggish when Enabled.  
+> **DataGridUwp1** performs well and does not leak with NavigationCacheMode set to Enabled, does not leak but is sluggish when Disabled.  
 > **TabViewUwp1** leaks memory badly and is unusable as is.  
 > **WebViewUwp1** performs well, has a small leak when NavigationCacheMode set to Disabled.  
 > **TreeViewUwp1** performs well and does not leak with either NavigationCacheMode Enabled or Disabled.  
