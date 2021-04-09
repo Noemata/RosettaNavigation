@@ -48,9 +48,9 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 > **DataGridWinUI1** cannot be completed at this time because DataGrid has not been updated to the current release of WinUI.  
 > **TabViewWinUI1** leaks memory badly and is even worse than Uwp variant.  
 > **WebViewWinUI1** performs very well, does not leak when NavigationCacheMode set to Enabled, small leak when Disabled.  !!Warning !! flicker may induce seizure for those with photosensitive epilepsy.  
-> **TreeViewWinUI1** crashes.  
+> **TreeViewWinUI1** *Crashes.  
 
-The WinUI crash happens inside of JsonHelper.cs in the static method call shown below:
+*The WinUI crash happens inside of JsonHelper.cs in the static method call shown below:
 
 ```csharp
         private static TreeViewNode GetChild(KeyValuePair<string, JToken> pair)
@@ -58,7 +58,7 @@ The WinUI crash happens inside of JsonHelper.cs in the static method call shown 
             if (pair.Value == null)
                 return null;
 
-            // MP! WinUI Crashes here??
+            // MP! WinUI crashes here??
             TreeViewNode child = new TreeViewNode()
             {
                 Content = pair, IsExpanded = true
