@@ -58,6 +58,7 @@ namespace TreeView1
                 }
                 else
                 {
+                    // MP! WinUI will not crash if this line is commented out??
                     parent.Children.Add(GetChild(pair));
                 }
             }
@@ -70,6 +71,7 @@ namespace TreeView1
             if (pair.Value == null)
                 return null;
 
+            // MP! WinUI Crashes here??
             TreeViewNode child = new TreeViewNode()
             {
                 Content = pair, IsExpanded = true
