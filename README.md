@@ -42,10 +42,10 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 
 **WinUI**
 
-> **CanvasWinUI** sluggish depending on controls used, becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
-> **ListBoxWinUI1** becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
-> **ListViewWinUI1** becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
-> **GridViewWinUI1** becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled.  
+> **CanvasWinUI** sluggish depending on controls used, becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled leading to an eventual crash.  
+> **ListBoxWinUI1** becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled leading to an eventual crash.  
+> **ListViewWinUI1** becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled leading to an eventual crash.  
+> **GridViewWinUI1** becomes progressively slower due to a memory leak with NavigationCacheMode Enabled or Disabled leading to an eventual crash.  
 > **DataGridWinUI1** cannot be completed at this time because DataGrid has not been updated to the current release of WinUI.  
 > **TabViewWinUI1** leaks memory badly and is even worse than Uwp variant.  
 > **WebViewWinUI1** performs very well, does not leak when NavigationCacheMode set to Enabled, small leak when Disabled.  !!Warning !! flicker may induce seizure for those with photosensitive epilepsy.  
