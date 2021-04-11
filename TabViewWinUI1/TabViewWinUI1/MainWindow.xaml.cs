@@ -49,8 +49,8 @@ namespace TabView1
         {
             this.InitializeComponent();
             RootFrame = rootFrame;
-            RootFrame.Navigate(typeof(Page1));
             Context = this;
+            RootFrame.Navigate(typeof(Page1));
         }
 
         static int instance = 0;

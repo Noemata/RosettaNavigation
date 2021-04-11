@@ -24,7 +24,7 @@ namespace DataGrid1
         public Page1()
         {
             // Note: NavigationCacheMode.Disabled is the default
-            //NavigationCacheMode = NavigationCacheMode.Enabled;
+            NavigationCacheMode = NavigationCacheMode.Enabled;
             InitializeComponent();
             DataContext = null;
             Loaded += OnLoaded;
