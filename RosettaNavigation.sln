@@ -63,7 +63,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationViewUwp1", "Navig
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "NavigationViewWinUI1 (Package)", "NavigationViewWinUI1\NavigationViewWinUI1 (Package)\NavigationViewWinUI1 (Package).wapproj", "{88B7D7E6-4490-455B-A244-ECC8EDC96C9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavigationViewWinUI1", "NavigationViewWinUI1\NavigationViewWinUI1\NavigationViewWinUI1.csproj", "{AD28BA2F-3F73-4D55-AC71-ED8C8A8611BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavigationViewWinUI1", "NavigationViewWinUI1\NavigationViewWinUI1\NavigationViewWinUI1.csproj", "{AD28BA2F-3F73-4D55-AC71-ED8C8A8611BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewUwp2", "ListView2\ListViewUwp2.csproj", "{C2B9C080-8614-4EAA-93C2-BC873268C8E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -675,6 +677,32 @@ Global
 		{AD28BA2F-3F73-4D55-AC71-ED8C8A8611BB}.Release|x64.Build.0 = Release|x64
 		{AD28BA2F-3F73-4D55-AC71-ED8C8A8611BB}.Release|x86.ActiveCfg = Release|x86
 		{AD28BA2F-3F73-4D55-AC71-ED8C8A8611BB}.Release|x86.Build.0 = Release|x86
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|ARM.Build.0 = Debug|ARM
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|ARM.Deploy.0 = Debug|ARM
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|ARM64.Build.0 = Debug|ARM64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|x64.ActiveCfg = Debug|x64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|x64.Build.0 = Debug|x64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|x64.Deploy.0 = Debug|x64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|x86.ActiveCfg = Debug|x86
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|x86.Build.0 = Debug|x86
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Debug|x86.Deploy.0 = Debug|x86
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|Any CPU.ActiveCfg = Release|x86
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|ARM.ActiveCfg = Release|ARM
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|ARM.Build.0 = Release|ARM
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|ARM.Deploy.0 = Release|ARM
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|ARM64.ActiveCfg = Release|ARM64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|ARM64.Build.0 = Release|ARM64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|ARM64.Deploy.0 = Release|ARM64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|x64.ActiveCfg = Release|x64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|x64.Build.0 = Release|x64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|x64.Deploy.0 = Release|x64
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|x86.ActiveCfg = Release|x86
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|x86.Build.0 = Release|x86
+		{C2B9C080-8614-4EAA-93C2-BC873268C8E3}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
