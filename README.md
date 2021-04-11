@@ -49,7 +49,7 @@ Visual Studio 2019 appears to contribute a memory leak artifact to the tests.  C
 > **DataGridWinUI1** cannot be completed at this time because DataGrid has not been updated to the current release of WinUI.  
 > **TabViewWinUI1** leaks memory badly and is even worse than Uwp variant.  
 > **WebViewWinUI1** performs very well, does not leak when NavigationCacheMode set to Enabled, small leak when Disabled.  !!Warning !! flicker may induce seizure for those with photosensitive epilepsy.  
-> **NavigationViewWinUI1** Crashes on same code as UWP version.  
+> **NavigationViewWinUI1** Crashes on same code that works correctly in UWP version.  
 > **TreeViewWinUI1** *Crashes.  
 
 *The WinUI crash happens inside of JsonHelper.cs in the static method call shown below:
