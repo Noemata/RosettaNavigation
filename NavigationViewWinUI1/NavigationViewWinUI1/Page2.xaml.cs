@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 
 using Microsoft.UI.Xaml.Controls;
@@ -46,6 +47,7 @@ namespace NavigationView1
 
             if (MainWindow.Context.AutoPage)
             {
+                await Task.Delay(5);
                 MainWindow.RootFrame.GoBack();
             }
         }

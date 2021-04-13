@@ -30,6 +30,7 @@ namespace ListView1
             Loaded += OnLoaded;
             Trace.WriteLine("Page 1 not cached.");
 
+            // Register CompositionTarget.Rendering as soon as possible to minimize the amount of time we spend on the page while also forcing the page to render at least partially.
             RegisterRendering();
         }
 
@@ -40,6 +41,9 @@ namespace ListView1
             // When NavigationCacheMode.Disabled, we need to give the UI time to render and respond to input.  Is there a better/faster way to do this?
             if (MainPage.Context.AutoPage && redrawCycle == 4)
             {
+                // It is essential to detach from CompositionTarget.Rendering before navigating away from the current page since this is a global event handler
+                // that is currently being dispatched locally with no awareness of being used elsewhere.  Since this is not a weak event handle it will block the page
+                // object from being freed.
                 UnRegisterRendering();
                 MainPage.RootFrame.Navigate(typeof(Page2));
             }
